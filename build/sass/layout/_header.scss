@@ -1,0 +1,88 @@
+.header {
+    background: $c-white;
+    position: relative;
+
+    &--sticky {
+        z-index: 100;
+
+        @media (min-width: $tablet-big) {
+            position: sticky;
+            top: 0;
+        }
+    }
+
+    &--search {
+        z-index: 90;
+
+        @media (min-width: $tablet-big) {
+            top: 66px;
+        }
+    }
+
+    &:last-of-type {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    &__go-to-life {
+        height: 60px;
+
+        background:
+            linear-gradient(90deg, rgba(90, 133, 0, 0) 37.57%, #6A9C00 100%),
+            url('../img/go-to-life.mobile.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-width: $tablet-big) {
+            background:
+                linear-gradient(90deg, rgba(90, 133, 0, 0) 37.57%, #6A9C00 100%),
+                url('../img/go-to-life.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__container {
+            min-width: $mobile-xs;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 60px;
+            align-items: center;
+            justify-items: center;
+
+            @media (min-width: $tablet-big) {
+                grid-template-columns: 323px 1fr;
+                justify-items: left;
+            }
+        }
+
+        &__title {
+            width: 115px;
+            color: $c-white;
+            font-weight: $bold;
+            font-size: 14px;
+            line-height: 120%;
+
+            @media (min-width: $tablet-big) {
+                width: auto;
+                margin-left: 14px;
+                font-size: 18px;
+                line-height: 140%;
+            }
+        }
+
+        &__button {
+            &__btn {
+                font-weight: $bold;
+                padding: 5px 8px;
+            }
+        }
+    }
+
+    &__navigation {
+        height: 66px;
+        position: relative;
+
+        // menu styles from blocks/_menu.scss
+    }
+}

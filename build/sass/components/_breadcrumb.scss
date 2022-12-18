@@ -1,0 +1,26 @@
+.breadcrumbs {
+    padding-bottom: 24px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 8px;
+
+        &__item {
+            display: block;
+
+            &:not(:last-child) {
+                padding-right: 40px;
+                background: url('../img/arrow-right.svg') right 16px center no-repeat;
+            }
+
+            &__link {
+                display: block;
+                color: $c-dark-gray;
+                font-size: 16px;
+                line-height: 22px;
+                text-decoration: none;
+            }
+        }
+    }
+}

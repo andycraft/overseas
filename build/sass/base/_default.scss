@@ -1,0 +1,51 @@
+html,
+body {
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: $pt-sans;
+    padding: 0;
+}
+
+object {
+    pointer-events: none;
+}
+
+// Buttons
+input,
+button,
+textarea {
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+button {
+    background: transparent;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    font-weight: normal;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}

@@ -1,0 +1,157 @@
+@import "vars"
+@mixin br($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    border-radius: $radius
+
+@mixin clearfix
+    &:after
+        content: ' '
+
+        visibility: hidden
+        display: block
+        height: 0
+
+        clear: both
+
+@mixin placeholder-all
+    &.placeholder
+        @content
+    &:-moz-placeholder
+        @content
+    &::-webkit-input-placeholder
+        @content
+
+@mixin mobile-small
+    @media(max-width: $mobile-small)
+        @content
+
+@mixin mobile
+    @media(max-width: $mobile )
+        @content
+
+@mixin tablet
+    @media(max-width: $tablet)
+        @content
+
+@mixin tablet-big
+    @media(max-width: $tablet-big)
+        @content
+
+@mixin desktop-small
+    @media(max-width: $desktop-small)
+        @content
+
+@mixin desktop
+    @media(max-width: $desktop)
+        @content
+
+@mixin desktop-big
+    @media(max-width: $desktop-big)
+        @content
+
+@mixin desktop-only
+    @media(min-width: 1025px)
+        @content
+
+@mixin link
+    text-decoration: none
+    color: inherit
+
+    &:hover
+        color: inherit
+
+@mixin transition
+    transition: all 0.4s
+
+// Typography
+@mixin sans-regular
+    font-family: $pt-sans
+    font-weight: $regular
+
+@mixin sans-bold
+    font-family: $pt-sans
+    font-weight: $bold
+
+@mixin big-head
+    +sans-bold
+
+    font-size: 40px
+    line-height: 48px
+
+@mixin head
+    +sans-bold
+
+    font-size: 28px
+    line-height: 36px
+
+    +tablet-big
+        +mobile-head
+
+@mixin mobile-head
+    +sans-bold
+
+    font-size: 18px
+    line-height: 24px
+
+@mixin main-text
+    +sans-regular
+
+    font-size: 16px
+    line-height: 28px
+
+    +tablet-big
+        +mobile-main-text
+
+@mixin mobile-main-text
+    +sans-regular
+
+    font-size: 12px
+    line-height: 18px
+
+@mixin button
+    +sans-regular
+
+    font-size: 16px
+    line-height: 28px
+    letter-spacing: 0.16px
+
+    +tablet-big
+        +mobile-button
+
+@mixin mobile-button
+    +sans-regular
+
+    font-size: 12px
+    line-height: 18px
+
+@mixin small-head
+    +sans-bold
+
+    font-size: 18px
+    line-height: 24px
+
+    +tablet-big
+        +mobile-small-head
+
+@mixin mobile-small-head
+    +sans-regular
+
+    font-size: 14px
+    line-height: 18px
+
+@mixin label
+    +sans-regular
+
+    font-size: 14px
+    line-height: 16px
+
+    +tablet-big
+        +mobile-label
+
+@mixin mobile-label
+    +sans-regular
+
+    font-size: 11px
+    line-height: 14px

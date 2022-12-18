@@ -1,0 +1,112 @@
+button {
+    cursor: pointer;
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    cursor: pointer;
+
+    padding: 11px 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    border: 1px solid $c-prime;
+    background-color: $c-prime;
+    color: $c-white;
+
+    font-weight: $regular;
+    font-size: 16px;
+    line-height: 140%;
+
+    &:hover {
+        background-color: rgba(41, 122, 216, 0.8);
+        border: 1px solid rgba(41, 122, 216, 0.8);
+    }
+
+    &:active {
+        background-color: #2875CF;
+        border: 1px solid #2875CF;
+    }
+
+    &:disabled,
+    &[disabled=disabled],
+    &.is-disabled {
+        background-color: #297AD8;
+        border: 1px solid #297AD8;
+        opacity: 0.4;
+    }
+
+    &--white {
+        background-color: $c-white;
+        color: $c-prime;
+
+        &:hover {
+            background-color: rgba(41, 122, 216, 0.07);
+            border: 1px solid rgba(41, 122, 216, 0.8);
+        }
+
+        &:active {
+            background-color: rgba(41, 122, 216, 0.15);
+            border: 1px solid #2875CF;
+        }
+
+        &:disabled,
+        &[disabled=disabled],
+        &.is-disabled {
+            background-color: $c-white;
+            border: 1px solid #297AD8;
+            opacity: 0.4;
+        }
+    }
+
+    &--orange {
+        color: $c-white;
+        background-color: $c-orange;
+        border: none;
+
+        &:hover {
+            background-color: #ffb11a;
+            border: none;
+        }
+
+        &:active {
+            background-color: #ee9d00;
+            border: none;
+        }
+
+        &:disabled,
+        &[disabled=disabled],
+        &.is-disabled {
+            background-color: $c-orange;
+            border: none;
+            opacity: 0.4;
+        }
+    }
+
+    &--gray {
+        color: $c-black;
+        background-color: $c-white;
+        border: 1px solid $c-medium-gray;
+
+        &:hover {
+            background-color: rgba(88, 88, 126, 0.05);
+            border: 1px solid $c-medium-gray;
+        }
+
+        &:active {
+            background-color: rgba(88, 88, 126, 0.11);
+            border: 1px solid $c-medium-gray;
+        }
+
+        &:disabled,
+        &[disabled=disabled],
+        &.is-disabled {
+            background-color: $c-white;
+            border: 1px solid $c-medium-gray;
+            opacity: 0.6;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.content {
+    &__body {
+        @media (min-width: $tablet-big) {
+            flex-grow: 1;
+        }
+
+        &__title {
+            font-weight: $bold;
+            font-size: 36px;
+            line-height: 140%;
+        }
+    }
+
+    &__navbar {
+        @media (max-width: $mobile-max) {
+            display: none;
+        }
+
+        @media (min-width: $tablet-big) {
+            min-width: 240px;
+            flex-basis: 240px;
+        }
+
+        &__list {
+            &__item {
+                &__link {
+                    display: block;
+                    padding: 15px 12px;
+                    border-radius: 8px;
+
+                    color: $c-black;
+                    font-size: 16px;
+                    line-height: 22px;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: rgba(88, 88, 126, 0.05);
+                    }
+
+                    .is-selected & {
+                        background: rgba(88, 88, 126, 0.11);
+                    }
+                }
+            }
+        }
+    }
+
+    &__sidebar {
+        background: #eee;
+
+        @media (min-width: $tablet-big) {
+            min-width: 260px;
+            flex-basis: 260px;
+        }
+    }
+}

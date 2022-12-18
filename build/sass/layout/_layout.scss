@@ -1,0 +1,36 @@
+.container {
+    box-sizing: border-box;
+    margin: 0 18px;
+
+    @media (min-width: $tablet-big) {
+        margin: 0 30px;
+    }
+
+    @media (min-width: $desktop) {
+        max-width: 1176px;
+        margin: 0 auto;
+    }
+
+    &--internal-page {
+        padding-top: 40px;
+    }
+
+    &--with-sidebar {
+        display: flex;
+        gap: 24px;
+
+        @media (max-width: $mobile-max) {
+            flex-direction: column;
+        }
+    }
+
+    &--with-navbar {
+        display: flex;
+        gap: 44px;
+
+        @media (max-width: $mobile-max) {
+            flex-direction: column;
+        }
+    }
+}
+

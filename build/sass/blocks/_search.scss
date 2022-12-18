@@ -1,0 +1,142 @@
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+
+    &__query {
+        flex: 1;
+        position: relative;
+
+        &__input {
+            width: 100%;
+            padding: 11px 40px 11px 12px;
+        }
+
+        &__button {
+            width: 32px;
+            height: 32px;
+            background: url('../img/search.svg') center center no-repeat;
+            position: absolute;
+            top: 7px;
+            right: 7px;
+        }
+    }
+
+    &__flats {
+        position: relative;
+
+        &__input {
+            width: 158px;
+            padding: 11px 40px 11px 12px;
+        }
+
+        &__button {
+            width: 32px;
+            height: 32px;
+            background: url('../img/arrow-down.svg') center center no-repeat;
+            position: absolute;
+            top: 7px;
+            right: 7px;
+        }
+    }
+
+    &__bedrooms {
+        position: relative;
+
+        &__input {
+            width: 123px;
+            padding: 11px 40px 11px 12px;
+        }
+
+        &__button {
+            width: 32px;
+            height: 32px;
+            background: url('../img/arrow-down.svg') center center no-repeat;
+            position: absolute;
+            top: 7px;
+            right: 7px;
+        }
+    }
+
+    &__cost {
+        position: relative;
+
+        &__input {
+            width: 151px;
+            padding: 11px 40px 11px 12px;
+        }
+
+        &__button {
+            width: 32px;
+            height: 32px;
+            background: url('../img/arrow-down.svg') center center no-repeat;
+            position: absolute;
+            top: 7px;
+            right: 7px;
+        }
+    }
+
+    &__show-filters {
+        &__button {
+            background: $c-white;
+            color: $c-black;
+            border: 1px solid $c-medium-gray;
+            padding: 11px 12px;
+
+            display: flex;
+            gap: 8px;
+
+            &:hover {
+                background: rgba(88, 88, 126, 0.11);
+                border-color: $c-medium-gray;
+            }
+
+            &__amount {
+                display: block;
+                background: rgba(88, 88, 126, 0.15);
+                box-sizing: border-box;
+                min-width: 22px;
+                padding: 0 7px;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    &__start-search {
+        &__button {
+            padding: 11px 12px;
+
+            display: flex;
+            gap: 8px;
+
+            &__amount {
+                display: block;
+                color: $c-prime;
+                background: rgba(255, 255, 255, 0.7);
+                box-sizing: border-box;
+                min-width: 22px;
+                padding: 0 7px;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        &__flats,
+        &__bedrooms,
+        &__cost {
+            display: none;
+        }
+
+        &__start-search {
+            flex-basis: 100%;
+
+            &__button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
