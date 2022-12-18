@@ -1,0 +1,9 @@
+# IDE settings
+.idea/
+.vscode
+
+# MacOs temp files
+.DS_Store
+
+# Node and packages
+node_modules
