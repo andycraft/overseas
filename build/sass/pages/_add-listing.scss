@@ -240,6 +240,10 @@
     }
 
     &__textarea {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 15px 12px;
+
         &::placeholder {
             color: #C2C2CF;
         }

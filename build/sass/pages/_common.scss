@@ -22,6 +22,10 @@
         }
 
         &__list {
+            position: sticky;
+            top: 100px;
+            padding-bottom: 24px;
+
             &__item {
                 &__link {
                     display: block;

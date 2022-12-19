@@ -234,7 +234,9 @@
     }
 
     &--currency {
-        min-width: 91px;
+        // left: -7px;
+        left: 3px;
+        text-align: center;
     }
 
     &--language {
