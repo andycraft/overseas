@@ -24,3 +24,16 @@
         }
     }
 }
+
+.back-to-search {
+    &__link {
+        display: block;
+        padding-left: 29px;
+        background: url('../img/arrow-back.svg') left center no-repeat;
+
+        color: $c-dark-blue;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+    }
+}

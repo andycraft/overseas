@@ -32,5 +32,23 @@
             flex-direction: column;
         }
     }
+
+    &--breadcrumbs {
+        display: flex;
+        row-gap: 12px;
+        column-gap: 40px;
+
+        @media (max-width: $mobile-max) {
+            flex-direction: column;
+        }
+    }
+}
+
+.full-size-container {
+    margin: 0;
+
+    @media (min-width: $tablet-big) {
+        margin: 0 24px;
+    }
 }
 

@@ -88,4 +88,11 @@ function showAllCountries(e)
         e.preventDefault();
         this.classList.toggle('is-selected');
     });
+
+    addEventHandler('.property-details__description__title__see-more', 'click', function(e){
+        e.preventDefault();
+        this.parentElement.classList.toggle('is-active');
+        document.querySelector('.property-details__description__text').classList.toggle('is-hidden');
+    });
+
 })();
