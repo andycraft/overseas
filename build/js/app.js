@@ -95,4 +95,8 @@ function showAllCountries(e)
         document.querySelector('.property-details__description__text').classList.toggle('is-hidden');
     });
 
+    addEventHandler('.inline-form__input__dropdown', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+    });
 })();

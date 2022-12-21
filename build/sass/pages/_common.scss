@@ -50,10 +50,8 @@
     }
 
     &__sidebar {
-        background: #eee;
-
         @media (min-width: $tablet-big) {
-            min-width: 260px;
+            // min-width: 260px;
             flex-basis: 260px;
         }
     }

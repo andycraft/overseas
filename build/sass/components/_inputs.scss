@@ -39,3 +39,20 @@ textarea {
     font-size: 16px;
     line-height: 140%;
 }
+
+.cbx {
+    cursor: pointer;
+
+    display: block;
+    margin: 2px 0;
+    border: 1px solid $c-black;
+    border-radius: 3px;
+    min-width: 14px;
+    width: 14px;
+    height: 14px;
+
+    &:checked {
+        background: url('../img/icons/check.svg') center center no-repeat;
+    }
+}
+

@@ -155,9 +155,9 @@
                                     <a class="property-details__file-link" href="#">File_file.pdf</a>
                                 </div>
 
-                                <div class="property-details__file-preview">
+                                <div class="property-details__file-preview is-video">
                                     <a class="property-details__file-image-link" href="#">
-                                        <span class="property-details__image-preview property-details__image-preview--video">
+                                        <span class="property-details__image-preview">
                                             <img src="img/property/property-2.webp">
                                         </span>
                                     </a>
@@ -181,28 +181,153 @@
                             </h6>
 
                             <div class="property-details__agency__data">
-                                <div>[Logo]</div>
-                                <div>
-                                    <div>Agent at Grand Falcon Real Estate Management LLC</div>
-                                    <div>+971565110564</div>
+                                <div class="property-details__agency__data__block">
+                                    <div class="property-details__agency__data__block__logo">
+                                        <img class="property-details__agency__data__block__logo__image" src="img/castles.jpeg">
+                                    </div>
+
+                                    <div class="property-details__agency__data__block__text">
+                                        <div class="property-details__agency__data__block__text__description">
+                                            Agent at Grand Falcon Real Estate Management LLC
+                                        </div>
+                                        <a class="property-details__agency__data__block__text__phone" href="tel:+971565110564">
+                                            +971565110564
+                                        </a>
+                                    </div>
                                 </div>
 
-                                <div>[Photo]</div>
-                                <div>Noufal Paduvil</div>
-                                <div>Agent at Grand Falcon Real Estate Management LLC</div>
-                                <div>Speaks English, Arabic, Hindi, Urdu, Malayalam</div>
-                                <div>+971 565 110 564</div>
-                                <div>uhovinnypuha@mail.ru</div>
+                                <div class="property-details__agency__data__block">
+                                    <div class="property-details__agency__data__block__photo">
+                                        <img class="property-details__agency__data__block__photo__image" src="img/avatar2.png">
+                                    </div>
+
+                                    <div class="property-details__agency__data__block__person">
+                                        <div class="property-details__agency__data__block__person__name">
+                                            Noufal Paduvil
+                                        </div>
+                                        <div class="property-details__agency__data__block__person__position">
+                                            Agent at Grand Falcon Real Estate Management LLC
+                                        </div>
+                                        <div class="property-details__agency__data__block__person__language">
+                                            Speaks English, Arabic, Hindi, Urdu, Malayalam
+                                        </div>
+                                        <div class="property-details__agency__data__block__person__contacts">
+                                            <a class="property-details__agency__data__block__person__contacts__phone" href="tel:+971565110564">
+                                                +971 565 110 564
+                                            </a>
+                                            <a class="property-details__agency__data__block__person__contacts__email" href="mailto:uhovinnypuha@mail.ru">
+                                                uhovinnypuha@mail.ru
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="content__sidebar">
-                    <div style="background: #eee; text-align: center; padding: 100px 0;">
-                        [Sidebar]
-                    </div>
+                    <form class="inline-form inline-form--ask-seller">
+                        <h3 class="inline-form__title">
+                            Ask seller for more details
+                        </h3>
+
+                        <div class="inline-form__groups">
+                            <div class="inline-form__group">
+                                <div class="inline-form__field">
+                                    <input class="inp inline-form__input inline-form__input--name" type="text" placeholder="Name">
+                                </div>
+                                <div class="inline-form__field">
+                                    <input class="inp inline-form__input inline-form__input--surname" type="text" placeholder="Surname">
+                                </div>
+                                <div class="inline-form__field">
+                                    <input class="inp inline-form__input inline-form__input--email" type="text" placeholder="E-mail">
+                                </div>
+                                <div class="inline-form__field">
+                                    <input class="inp inline-form__input inline-form__input--phone" type="text" placeholder="Phone">
+                                </div>
+
+                                <div class="inline-form__block">
+                                    <label class="inline-form__field inline-form__field--checkbox">
+                                        <input class="cbx inline-form__checkbox inline-form__checkbox--whatsapp" type="checkbox">
+                                        <span>WhatsApp</span>
+                                    </label>
+                                    <label class="inline-form__field inline-form__field--checkbox">
+                                        <input class="cbx inline-form__checkbox inline-form__checkbox--viber" type="checkbox">
+                                        <span>Viber</span>
+                                    </label>
+                                    <label class="inline-form__field inline-form__field--checkbox">
+                                        <input class="cbx inline-form__checkbox inline-form__checkbox--telegram" type="checkbox">
+                                        <span>Telegram</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="inline-form__group">
+                                <div class="inline-form__field inline-form__field--textarea">
+                                    <textarea class="txt inline-form__textarea inline-form__textarea--message" placeholder="Your message for seller"></textarea>
+                                </div>
+
+                                <div class="inline-form__field inline-form__field--submit">
+                                    <button class="btn inline-form__submit">Send Enquiry</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
+
+            <div class="container container--internal-page">
+                <div style="background: #eee; text-align: center; padding: 100px 0; margin: 40px 0;">
+                    [Similar properties]
+                </div>
+
+                <form class="inline-form inline-form--property-alert">
+                    <h3 class="inline-form__title">
+                        Property Alert Subscription
+                    </h3>
+
+                    <div class="inline-form__groups">
+                        <div class="inline-form__group">
+                            <div class="inline-form__field">
+                                <input class="inp inline-form__input inline-form__input--query" type="text" placeholder="Enter country, city or town">
+                            </div>
+
+                            <div class="inline-form__block">
+                                <div class="inline-form__field">
+                                    <input class="inp inline-form__input inline-form__input--flat" type="text" placeholder="Flat/apartment" value="Flat/apartment">
+                                    <button class="inline-form__input__dropdown"></button>
+                                </div>
+                                <div class="inline-form__field">
+                                    <input class="inp inline-form__input inline-form__input--price" type="text" placeholder="$200k - $900k" value="$200k - $900k">
+                                    <button class="inline-form__input__dropdown"></button>
+                                </div>
+                            </div>
+
+                            <div class="inline-form__field inline-form__field--notice">
+                                <span>
+                                    Specify the features of the property you looking for, and we'll send you
+                                    email if such property will list on portal.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="inline-form__group">
+                            <div class="inline-form__field inline-form__field--email">
+                                <input class="inp inline-form__input inline-form__input--email" type="text" placeholder="E-mail">
+                            </div>
+
+                            <label class="inline-form__field inline-form__field--checkbox">
+                                <input class="cbx inline-form__checkbox inline-form__checkbox--policy" type="checkbox">
+                                <span>I agree to Terms of Use and Privacy Policy</span>
+                            </label>
+
+                            <div class="inline-form__field inline-form__field--submit">
+                                <button class="btn inline-form__submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </content>
 
