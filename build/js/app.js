@@ -99,4 +99,33 @@ function showAllCountries(e)
         e.preventDefault();
         this.classList.toggle('is-active');
     });
+
+    addEventHandler('.property-details__data__item__button--save', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+    });
+
+    addEventHandler('.property-gm__switch--to-map', 'click', function(e){
+        e.preventDefault();
+        this.classList.add('is-hidden');
+        document.querySelector('.property-gallery').classList.add('is-hidden');
+        document.querySelector('.property-gm__switch--to-gallery').classList.remove('is-hidden');
+        document.querySelector('.property-map').classList.remove('is-hidden');
+    });
+
+    addEventHandler('.property-gm__switch--to-gallery', 'click', function(e){
+        e.preventDefault();
+        this.classList.add('is-hidden');
+        document.querySelector('.property-map').classList.add('is-hidden');
+        document.querySelector('.property-gm__switch--to-map').classList.remove('is-hidden');
+        document.querySelector('.property-gallery').classList.remove('is-hidden');
+    });
+
+    addEventHandler('.property-map__zoom', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+        document.querySelector('.property-map__map').classList.toggle('is-zoomed');
+    });
+
+
 })();
