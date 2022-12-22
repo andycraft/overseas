@@ -767,3 +767,204 @@
         }
     }
 }
+
+.similar-properties {
+    &__title {
+        font-weight: $bold;
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    &__list {
+        position: relative;
+    }
+
+    &__items {
+        padding-top: 32px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px 24px;
+
+        @media (min-width: $tablet) and (max-width: $mobile-max) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: $tablet-big) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    }
+
+    &__item {
+        padding: 15px;
+        border: 1px solid $c-medium-gray;
+        border-radius: 12px;
+
+        @media (min-width: $tablet) and (max-width: $mobile-max) {
+            flex-basis: 40%;
+            flex-grow: 1;
+        }
+
+        @media (min-width: $tablet-big) {
+            flex-basis: 33%;
+            min-width: calc(33% - 13px);
+            box-sizing: border-box;
+        }
+
+        &__photo {
+            position: relative;
+
+            &__link {
+                display: block;
+            }
+
+            &__image {
+                width: 100%;
+                height: 160px;
+                border-radius: 6px;
+                object-fit: cover;
+
+                @media (min-width: $tablet-big) {
+                    height: 209px;
+                }
+            }
+
+            &__save {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+
+                width: 24px;
+                height: 24px;
+                background: url('../img/icons/heart-white.svg') center center no-repeat;
+
+                &.is-active {
+                    background-image: url('../img/icons/heart-white.active.svg');
+                }
+            }
+        }
+
+        &__title {
+            padding-top: 18px;
+
+            @media (min-width: $tablet-big) {
+                padding-top: 28px;
+            }
+
+            &__link {
+                color: $c-dark-blue;
+
+                font-weight: $bold;
+                font-size: 18px;
+                line-height: 140%;
+                text-decoration: none;
+            }
+        }
+
+        &__price {
+            padding-top: 12px;
+
+            font-weight: $bold;
+            font-size: 18px;
+            line-height: 140%;
+
+            @media (min-width: $tablet-big) {
+                font-size: 24px;
+                line-height: 140%;
+            }
+        }
+
+        &__props {
+            padding-top: 18px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+
+            @media (min-width: $tablet-big) {
+                padding-top: 24px;
+            }
+
+            &__item {
+                padding-left: 29px;
+                background-position: left center;
+                background-repeat: no-repeat;
+
+                display: block;
+                font-size: 16px;
+                line-height: 22px;
+                white-space: nowrap;
+
+                &--bedrooms {
+                    background-image: url('../img/icons/features/bedrooms.svg');
+                }
+
+                &--area {
+                    background-image: url('../img/icons/features/house-area.svg');
+                }
+            }
+        }
+
+        &__description {
+            padding-top: 18px;
+
+            color: $c-dark-gray;
+            font-size: 16px;
+            line-height: 140%;
+
+            @media (min-width: $tablet-big) {
+                padding-top: 24px;
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+
+        top: 50%;
+        margin-top: -6px;
+        width: 32px;
+        height: 32px;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 11px 20px;
+        border-radius: 100px;
+
+        filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.14));
+
+        @media (max-width: $mobile-max) {
+            display: none;
+        }
+
+        &--prev {
+            left: -32px;
+            background-image: url('../img/arrow-prev-black.svg');
+
+            @media (min-width: $desktop) {
+                left: -40px;
+            }
+        }
+
+        &--next {
+            right: -32px;
+            background-image: url('../img/arrow-next-black.svg');
+
+            @media (min-width: $desktop) {
+                right: -40px;
+            }
+        }
+    }
+}

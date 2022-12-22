@@ -127,5 +127,8 @@ function showAllCountries(e)
         document.querySelector('.property-map__map').classList.toggle('is-zoomed');
     });
 
-
+    addEventHandler('.similar-properties__item__photo__save', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+    });
 })();
