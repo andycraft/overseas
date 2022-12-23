@@ -131,4 +131,13 @@ function showAllCountries(e)
         e.preventDefault();
         this.classList.toggle('is-active');
     });
+
+    document.querySelectorAll('.agency-countries__list--fixed-max-width .agency-countries__list__item').forEach(el => {
+        let country = el.querySelector('.agency-countries__list__item__country');
+        if (country) {
+            el.title = country.innerText;
+        }
+    });
+
+
 })();

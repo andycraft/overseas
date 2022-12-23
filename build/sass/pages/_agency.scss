@@ -154,3 +154,111 @@
 
     }
 }
+
+.agency-countries {
+    display: flex;
+    flex-direction: column;
+    row-gap: 29px;
+
+    &__title {
+        font-weight: $bold;
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 18px 24px;
+
+        @media (min-width: $tablet) {
+            &--by-columns {
+                max-width: 95%;
+            }
+
+            &--by-columns &__item {
+                flex-basis: 30%;
+            }
+        }
+
+        &--fixed-max-width {
+            .agency-countries__list__item__country {
+                max-width: 72px;
+                white-space: nowrap;
+                overflow: hidden;
+                position: relative;
+                margin-right: -12px;
+                padding-right: 12px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    background-image: url('../img/dimmer.png');
+                    position: absolute;
+                    top: 0;
+                    right: 1px;
+                    width: 12px;
+                    height: 22px;
+                }
+            }
+        }
+
+        &--fixed-max-width &__item {
+            flex-basis: 42%;
+            @media (min-width: 666px) {
+                flex-basis: 30%;
+            }
+        }
+
+        &__item {
+            color: $c-black;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 12px;
+
+            font-size: 16px;
+            line-height: 22px;
+
+            &:hover {
+                color: $c-prime;
+            }
+
+            &__flag {
+                display: block;
+
+                img {
+                    display: block;
+                    object-fit: cover;
+                    border-radius: 4px;
+                }
+            }
+
+            &__country {
+                display: block;
+                // width: min-content;
+                // display: table-cell;
+                // max-width: 90%;
+                // flex-basis: 60%;
+                // flex-shrink: 0.1;
+                // width: auto;
+                // display: table-caption;
+
+                @media (min-width: $tablet-big) {
+                }
+            }
+
+            &__counter {
+                display: block;
+                padding: 1px 7px;
+                background: #E2EDFF;
+                color: $c-prime;
+                border-radius: 100px;
+                font-size: 14px;
+                line-height: 140%;
+                white-space: nowrap;
+            }
+        }
+    }
+}
