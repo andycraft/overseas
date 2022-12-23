@@ -262,3 +262,52 @@
         }
     }
 }
+
+.agency-description {
+    &__title {
+        padding-right: 40px;
+        position: relative;
+
+        font-weight: $bold;
+        font-size: 24px;
+        line-height: 140%;
+
+        &__see-more {
+            position: absolute;
+            right: 0;
+            top: 5px;
+
+            width: 22px;
+            height: 22px;
+
+            background: url('../img/arrow-up.svg') center center no-repeat;
+
+            .is-active & {
+                background-image: url('../img/arrow-down.svg');
+            }
+        }
+    }
+
+    &__text {
+        padding-top: 28px;
+
+        font-size: 16px;
+        line-height: 140%;
+
+        &.is-hidden {
+            display: none;
+        }
+
+        > p {
+            margin: 1em 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

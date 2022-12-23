@@ -139,5 +139,9 @@ function showAllCountries(e)
         }
     });
 
-
+    addEventHandler('.agency-description__title__see-more', 'click', function(e){
+        e.preventDefault();
+        this.parentElement.classList.toggle('is-active');
+        document.querySelector('.agency-description__text').classList.toggle('is-hidden');
+    });
 })();
