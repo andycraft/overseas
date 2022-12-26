@@ -150,4 +150,19 @@ function showAllCountries(e)
         this.parentElement.classList.toggle('is-active');
         document.querySelector('.agency-specialists__list').classList.toggle('is-hidden');
     });
+
+    addEventHandler('.search-form__popup-tag', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-selected');
+    });
+
+    addEventHandler('.search-form__popup-title-switch', 'click', function(e){
+        e.preventDefault();
+
+        let group = this.closest('.search-form__popup-group');
+        if (group) {
+            group.classList.toggle('is-active');
+        }
+    });
+
 })();

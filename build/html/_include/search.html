@@ -1,38 +1,206 @@
         <header class="header header--sticky header--search">
             <div class="container">
                 <form class="search-form">
-                    <div class="search-form__query">
-                        <input class="inp search-form__query__input" type="text" placeholder="Enter region or town">
-                        <button class="search-form__query__button"></button>
+                    <div class="search-form__bar">
+                        <div class="search-form__query">
+                            <input class="inp search-form__query-input" type="text" placeholder="Enter region or town">
+                            <button class="search-form__query-button"></button>
+                        </div>
+
+                        <div class="search-form__flats">
+                            <input class="inp search-form__flats-input" type="text" placeholder="Flat/apartment">
+                            <button class="search-form__flats-button"></button>
+                        </div>
+
+                        <div class="search-form__bedrooms">
+                            <input class="inp search-form__bedrooms-input" type="text" placeholder="Bedrooms">
+                            <button class="search-form__bedrooms-button"></button>
+                        </div>
+
+                        <div class="search-form__cost">
+                            <input class="inp search-form__cost-input" type="text" placeholder="$200k - $900k">
+                            <button class="search-form__cost-button"></button>
+                        </div>
+
+                        <div class="search-form__filters">
+                            <button class="btn search-form__filters-button">
+                                <span class="search-form__filters-amount">6</span>
+                                <span class="search-form__filters-title">Filters</span>
+                            </button>
+                        </div>
+
+                        <div class="search-form__search">
+                            <button class="btn search-form__search-button">
+                                <span class="search-form__search-title">Search</span>
+                                <span class="search-form__search-amount">22459</span>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="search-form__flats">
-                        <input class="inp search-form__flats__input" type="text" placeholder="Flat/apartment">
-                        <button class="search-form__flats__button"></button>
-                    </div>
+                    <div class="search-form__popup">
+                        <div class="search-form__popup-groups">
+                            <div class="search-form__popup-group search-form__popup-group--main is-active">
+                                <h3 class="search-form__popup-title">
+                                    <span class="search-form__popup-title-text">Main filters</span>
+                                    <button class="search-form__popup-title-switch"></button>
+                                </h3>
 
-                    <div class="search-form__bedrooms">
-                        <input class="inp search-form__bedrooms__input" type="text" placeholder="Bedrooms">
-                        <button class="search-form__bedrooms__button"></button>
-                    </div>
+                                <div class="search-form__popup-blocks">
+                                    <div class="search-form__popup-block search-form__popup-block--mobile">
+                                        Flat/apartment
+                                    </div>
 
-                    <div class="search-form__cost">
-                        <input class="inp search-form__cost__input" type="text" placeholder="$200k - $900k">
-                        <button class="search-form__cost__button"></button>
-                    </div>
+                                    <div class="search-form__popup-block search-form__popup-block--mobile">
+                                        Bedrooms
+                                    </div>
 
-                    <div class="search-form__show-filters">
-                        <button class="btn search-form__show-filters__button">
-                            <span class="search-form__show-filters__button__amount">6</span>
-                            <span class="search-form__show-filters__button__title">Filters</span>
-                        </button>
-                    </div>
+                                    <div class="search-form__popup-block search-form__popup-block--mobile">
+                                        $200k - $900k
+                                    </div>
 
-                    <div class="search-form__start-search">
-                        <button class="btn search-form__start-search__button">
-                            <span class="search-form__start-search__button__title">Search</span>
-                            <span class="search-form__start-search__button__amount">22459</span>
-                        </button>
+                                    <div class="search-form__popup-block">
+                                        Bathrooms
+                                        min.
+                                        max.
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        Build Size, sq.m
+                                        min.
+                                        max.
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        Plot Size, sq.m
+                                        min.
+                                        max.
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        To sea, m
+                                        min.
+                                        max.
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        To airport, km
+                                        min.
+                                        max.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="search-form__popup-group search-form__popup-group--type">
+                                <h3 class="search-form__popup-title">
+                                    <span class="search-form__popup-title-text">Type of property</span>
+                                    <button class="search-form__popup-title-switch"></button>
+                                </h3>
+
+                                <div class="search-form__popup-blocks">
+                                    <div class="search-form__popup-block">
+                                        <h4 class="search-form__popup-subtitle">
+                                            House/villa
+                                        </h4>
+
+                                        <div class="search-form__popup-tags">
+                                            <a class="search-form__popup-tag is-selected" href="#">Townhouse</a>
+                                            <a class="search-form__popup-tag is-selected" href="#">Chalet</a>
+                                            <a class="search-form__popup-tag" href="#">Castle</a>
+                                            <a class="search-form__popup-tag" href="#">Bungalow</a>
+                                            <a class="search-form__popup-tag" href="#">Mansion</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        <h4 class="search-form__popup-subtitle">
+                                            Flat/apartment
+                                        </h4>
+
+                                        <div class="search-form__popup-tags">
+                                            <a class="search-form__popup-tag" href="#">Duplex</a>
+                                            <a class="search-form__popup-tag" href="#">Studio</a>
+                                            <a class="search-form__popup-tag" href="#">Loft</a>
+                                            <a class="search-form__popup-tag" href="#">Penthouse</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        <h4 class="search-form__popup-subtitle">
+                                            Commercial
+                                        </h4>
+
+                                        <div class="search-form__popup-tags">
+                                            <a class="search-form__popup-tag" href="#">Office</a>
+                                            <a class="search-form__popup-tag" href="#">Hotel</a>
+                                            <a class="search-form__popup-tag" href="#">Restaurant</a>
+                                            <a class="search-form__popup-tag" href="#">Store</a>
+                                            <a class="search-form__popup-tag" href="#">Industrial</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="search-form__popup-group search-form__popup-group--additionally">
+                                <h3 class="search-form__popup-title">
+                                    <span class="search-form__popup-title-text">Additionally</span>
+                                    <button class="search-form__popup-title-switch"></button>
+                                </h3>
+
+                                <div class="search-form__popup-blocks">
+                                    <div class="search-form__popup-block">
+                                        <h4 class="search-form__popup-subtitle">
+                                            Media
+                                        </h4>
+
+                                        <div class="search-form__popup-tags">
+                                            <a class="search-form__popup-tag" href="#">Objects with video</a>
+                                            <a class="search-form__popup-tag" href="#">With floor plan</a>
+                                            <a class="search-form__popup-tag" href="#">With a virtual tour</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        <h4 class="search-form__popup-subtitle">
+                                            Build
+                                        </h4>
+
+                                        <div class="search-form__popup-tags">
+                                            <a class="search-form__popup-tag" href="#">New Build</a>
+                                            <a class="search-form__popup-tag" href="#">Under Construction</a>
+                                            <a class="search-form__popup-tag" href="#">Parking</a>
+                                            <a class="search-form__popup-tag" href="#">Lift</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-form__popup-block">
+                                        <h4 class="search-form__popup-subtitle">
+                                            Layout and rooms
+                                        </h4>
+
+                                        <div class="search-form__popup-tags">
+                                            <a class="search-form__popup-tag" href="#">Top Floor</a>
+                                            <a class="search-form__popup-tag" href="#">Swimming Pool</a>
+                                            <a class="search-form__popup-tag" href="#">Garden</a>
+                                            <a class="search-form__popup-tag" href="#">Terrace</a>
+                                            <a class="search-form__popup-tag" href="#">Air conditioning</a>
+                                            <a class="search-form__popup-tag" href="#">Fitted wardrobes</a>
+                                            <a class="search-form__popup-tag" href="#">Storage room</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-form__popup-buttons">
+                            <button class="btn btn--gray search-form__popup-button search-form__popup-button--reset">
+                                <span class="search-form__popup-button-title">Reset search</span>
+                            </button>
+
+                            <button class="btn search-form__popup-button search-form__popup-button--search">
+                                <span class="search-form__popup-button-title">Search</span>
+                                <span class="search-form__popup-button-amount">22459</span>
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
