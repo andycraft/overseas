@@ -144,4 +144,10 @@ function showAllCountries(e)
         this.parentElement.classList.toggle('is-active');
         document.querySelector('.agency-description__text').classList.toggle('is-hidden');
     });
+
+    addEventHandler('.agency-specialists__title__see-more', 'click', function(e){
+        e.preventDefault();
+        this.parentElement.classList.toggle('is-active');
+        document.querySelector('.agency-specialists__list').classList.toggle('is-hidden');
+    });
 })();
