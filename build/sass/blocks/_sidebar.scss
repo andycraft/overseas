@@ -1,0 +1,49 @@
+.sidebar-guide {
+    position: relative;
+
+    background: #FFFCE9;
+    background-image: url('../img/main/guide.mobile.webp') center center no-repeat;
+    border-radius: 16px;
+
+    box-sizing: border-box;
+    min-width: 260px;
+    height: 564px;
+
+    @media (max-width: $mobile-max) {
+        height: 600px;
+    }
+
+    &__text {
+        position: absolute;
+        left: 27px;
+        bottom: 29px;
+
+        @media (max-width: $mobile-max) {
+            bottom: auto;
+            top: 16px;
+            left: 30px;
+        }
+
+        &-title {
+            max-width: 200px;
+
+            color: $c-white;
+            font-weight: $bold;
+            font-size: 24px;
+            line-height: 140%;
+
+            @media (max-width: $mobile-max) {
+                color: $c-black;
+            }
+        }
+
+        &-button {
+            max-width: 200px;
+            margin-top: 20px;
+
+            @media (min-width: $tablet-big) {
+                margin-left: auto;
+            }
+        }
+    }
+}
