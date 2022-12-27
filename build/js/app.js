@@ -1,7 +1,7 @@
 function isMobile()
 {
-    const desktopMenu = document.querySelector('.menu-bar__desktop-menu');
-    const status = window.getComputedStyle(desktopMenu).getPropertyValue('display');
+    let desktopMenu = document.querySelector('.menu-bar__desktop-menu');
+    let status = window.getComputedStyle(desktopMenu).getPropertyValue('display');
     return (status == 'none') ? true : false;
 }
 
@@ -22,9 +22,9 @@ function toggleDropDownMenu(e)
 {
     e.preventDefault();
 
-    const parent = this.parentElement;
-    const isUserMenu = parent.classList.contains('menu-bar__user');
-    const isActive = parent.classList.contains('is-active');
+    let parent = this.parentElement;
+    let isUserMenu = parent.classList.contains('menu-bar__user');
+    let isActive = parent.classList.contains('is-active');
 
     if (isUserMenu && isMobile()) {
         parent.classList.remove('is-active');
@@ -68,6 +68,8 @@ function showAllCountries(e)
 (function(){
     console.log('dom ready');
 
+    // All pages
+
     addEventHandler('.mobile-menu-burger__button', 'click', toggleMobileMenu);
     addEventHandler('.mobile-menu__list__item.has-submenu > a', 'click', toggleSubMenu);
 
@@ -77,7 +79,11 @@ function showAllCountries(e)
         toggleDropDownMenu
     );
 
+    // Main page
+
     addEventHandler('.main-search__countries__show-all__button', 'click', showAllCountries);
+
+    // Add listing page
 
     addEventHandler('.add-listing__dropdown-input__button', 'click', function(e){
         e.preventDefault();
@@ -99,6 +105,8 @@ function showAllCountries(e)
         e.preventDefault();
         this.classList.toggle('is-active');
     });
+
+    // Property page
 
     addEventHandler('.property-details__data__item__button--save', 'click', function(e){
         e.preventDefault();
@@ -132,6 +140,8 @@ function showAllCountries(e)
         this.classList.toggle('is-active');
     });
 
+    // Agency page
+
     document.querySelectorAll('.agency-countries__list--fixed-max-width .agency-countries__list__item').forEach(el => {
         let country = el.querySelector('.agency-countries__list__item__country');
         if (country) {
@@ -151,6 +161,27 @@ function showAllCountries(e)
         document.querySelector('.agency-specialists__list').classList.toggle('is-hidden');
     });
 
+    // Search page
+
+    addEventHandler('.search-form__flats-button, .search-form__bedrooms-button, .search-form__cost-button', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+    });
+
+    addEventHandler('.search-form__filters-button', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+        let popup = document.querySelector('.search-form__popup');
+        if (popup) {
+            popup.classList.toggle('is-hidden');
+        }
+    });
+
+    addEventHandler('.search-form__popup-input-button', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+    });
+
     addEventHandler('.search-form__popup-tag', 'click', function(e){
         e.preventDefault();
         this.classList.toggle('is-selected');
@@ -158,11 +189,9 @@ function showAllCountries(e)
 
     addEventHandler('.search-form__popup-title-switch', 'click', function(e){
         e.preventDefault();
-
         let group = this.closest('.search-form__popup-group');
         if (group) {
             group.classList.toggle('is-active');
         }
     });
-
 })();
