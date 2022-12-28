@@ -56,7 +56,7 @@ function showAllCountries(e)
 {
     e.preventDefault();
 
-    const hiddenCountries = document.querySelectorAll('.main-search__countries__item.is-hidden');
+    const hiddenCountries = document.querySelectorAll('.main-search__countries__country-list .is-hidden');
 
     hiddenCountries.forEach((country) => {
         country.classList.remove('is-hidden');

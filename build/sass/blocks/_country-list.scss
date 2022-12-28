@@ -1,0 +1,87 @@
+.country-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px 2.8%;
+
+    &__item {
+        flex-basis: 48%;
+
+        display: flex;
+        column-gap: 12px;
+
+        color: $c-black;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+
+        @media (min-width: $tablet) {
+            flex-basis: 31%;
+        }
+
+        &:hover {
+            color: $c-prime;
+        }
+
+        &.is-hidden {
+            display: none;
+        }
+
+        &-flag {
+            display: block;
+
+            > img {
+                display: block;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+        }
+
+        &-country {
+            display: block;
+
+            max-width: 90px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            margin-right: -12px;
+            padding-right: 12px;
+
+            @media (min-width: $desktop) {
+                max-width: 120px;
+            }
+
+            @media (max-width: $mobile-big) {
+                max-width: 70px;
+            }
+
+            @media (max-width: $mobile-s) {
+                max-width: 50px;
+            }
+
+            &::after {
+                content: '';
+
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                display: block;
+                width: 12px;
+                height: 22px;
+                background-image: url('../img/dimmer.png');
+            }
+        }
+
+        &-counter {
+            display: block;
+            padding: 1px 7px;
+            background: #E2EDFF;
+            color: $c-prime;
+            border-radius: 100px;
+            font-size: 14px;
+            line-height: 140%;
+            white-space: nowrap;
+        }
+    }
+}
