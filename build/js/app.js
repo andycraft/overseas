@@ -142,8 +142,8 @@ function showAllCountries(e)
 
     // Agency page
 
-    document.querySelectorAll('.agency-countries__list--fixed-max-width .agency-countries__list__item').forEach(el => {
-        let country = el.querySelector('.agency-countries__list__item__country');
+    document.querySelectorAll('.country-list__item').forEach(el => {
+        let country = el.querySelector('.country-list__item-country');
         if (country) {
             el.title = country.innerText;
         }
@@ -159,6 +159,22 @@ function showAllCountries(e)
         e.preventDefault();
         this.parentElement.classList.toggle('is-active');
         document.querySelector('.agency-specialists__list').classList.toggle('is-hidden');
+    });
+
+    addEventHandler('.property-list__item-photo-remove, .property-list__item-details-buttons-remove, .property-list__item-info-buttons-remove', 'click', function(e){
+        e.preventDefault();
+        let property = this.closest('.property-list__item');
+        if (property) {
+            property.classList.toggle('is-hidden');
+        }
+    });
+
+    addEventHandler('.property-list__item-photo-like, .property-list__item-details-buttons-like, .property-list__item-info-buttons-like', 'click', function(e){
+        e.preventDefault();
+        let property = this.closest('.property-list__item');
+        if (property) {
+            property.classList.toggle('is-liked');
+        }
     });
 
     // Search page

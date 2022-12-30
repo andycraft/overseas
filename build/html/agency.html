@@ -367,7 +367,7 @@
                     </div>
                 </div>
 
-                <div class="content__sidebar">
+                <div class="content__sidebar content__sidebar--big">
                     <form class="inline-form inline-form--ask-seller">
                         <div class="inline-form__image">
                             <img class="inline-form__logo" src="img/castles.png">
@@ -422,49 +422,39 @@
                 </div>
             </div>
 
-            <div class="container container--internal-page">
-                <div>
-                    <div class="properties-list">
-                        <h6 class="properties-list__title">Our properties</h6>
+            <div class="container container--with-sidebar">
+                <div class="agency-properties">
+                    <h6 class="agency-properties__title">Our properties</h6>
 
-                        <div class="properties-list__control">
-                            Show on
-                            Our Sorting
-                            48 957 Listings
+                    <div class="agency-properties__head">
+                        <div class="agency-properties__control">
+                            <button class="btn btn--gray agency-properties__control-button agency-properties__control-button--show-on">
+                                Show on
+                            </button>
+
+                            <button class="btn btn--gray agency-properties__control-button agency-properties__control-button--sorting">
+                                Our Sorting
+                            </button>
                         </div>
 
-                        <div class="properties-list__list">
-                            <div class="properties-list__item">
-                                $400 000 (€412 000)
-                                3 bedroom apartment in Benidorm, Spain
-                                1 547 sq. m
-                                Layout
-                                Video
-                                Tour
-                                New Project consisting of 23 detached villas walking distance to the beach of El Campello, Alicante. New Project consisting of 23 detached...
-                            </div>
-
-                            <div class="properties-list__item properties-list__item--vip">
-
-                            </div>
-
-                            <div class="properties-list__item">
-
-                            </div>
-                        </div>
-
-                        <div class="properties-list__load-more">
-                            Load more
-                        </div>
-
-                        <div class="properties-list__load-pager">
-                            1 2 3 4 5
+                        <div class="agency-properties__counter">
+                            <span class="agency-properties__counter-desktop">48 957 Listings</span>
+                            <span class="agency-properties__counter-mobile">Objects 48 954</span>
                         </div>
                     </div>
 
-                    <div style="background: #eee; padding: 100px 0; text-align: center;">
-                        [Our properties]
+                    <div class="agency-properties__list">
+                        @@include('_include/property-list.html', {
+                            "class": "property-list--agency"
+                        })
+
+                        @@include('_include/load-more.html')
+
+                        @@include('_include/paginator.html')
                     </div>
+                </div>
+
+                <div class="content__sidebar content__sidebar--big">
                 </div>
             </div>
         </content>

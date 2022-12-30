@@ -51,8 +51,15 @@
 
     &__sidebar {
         @media (min-width: $tablet-big) {
-            // min-width: 260px;
+            min-width: 260px;
             flex-basis: 260px;
+        }
+
+        &--big {
+            @media (min-width: $tablet-big) {
+                min-width: 300px;
+                flex-basis: 300px;
+            }
         }
     }
 }
