@@ -23,6 +23,12 @@
             column-gap: 5.2%;
         }
 
+        &--ad {
+            display: block;
+            border: none;
+            padding: 0;
+        }
+
         &.is-hidden {
             display: none;
         }

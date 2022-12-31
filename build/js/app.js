@@ -210,4 +210,18 @@ function showAllCountries(e)
             group.classList.toggle('is-active');
         }
     });
+
+    addEventHandler('.search-result__tag-remove', 'click', function(e){
+        e.preventDefault();
+        let tag = this.closest('.search-result__tag');
+        if (tag) {
+            tag.remove();
+        }
+    });
+
+    addEventHandler('.search-result__controls-item-button', 'click', function(e){
+        e.preventDefault();
+        this.classList.toggle('is-active');
+    });
+
 })();
