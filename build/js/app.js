@@ -224,4 +224,29 @@ function showAllCountries(e)
         this.classList.toggle('is-active');
     });
 
+    // Common page
+
+    addEventHandler('.content__body--common .tabs__item', 'click', function(e){
+        e.preventDefault();
+
+        let tabs = this.closest('.tabs');
+        let tabs_items = tabs.querySelectorAll('.tabs__item');
+
+        tabs_items.forEach((tab) => {
+            tab.classList.remove('is-selected');
+        });
+
+        this.classList.add('is-selected');
+    });
+
+    addEventHandler('.content__body--common .faq__item-link', 'click', function(e){
+        e.preventDefault();
+
+        let faq_item = this.closest('.faq__item');
+
+        if (faq_item) {
+            faq_item.classList.toggle('is-active');
+        }
+    });
+
 })();
