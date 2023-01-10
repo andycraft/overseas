@@ -78,67 +78,72 @@
     }
 
     h1 {
-        margin: 40px 0 20px 0;
+        margin-bottom: 20px;
 
         font-weight: $bold;
         font-size: 28px;
         line-height: 110%;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 40px;
             font-size: 44px;
         }
     }
 
     h2 {
-        margin: 40px 0 20px 0;
+        margin-bottom: 20px;
 
         font-weight: $bold;
         font-size: 24px;
         line-height: 110%;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 30px;
             font-size: 36px;
         }
     }
 
     h3 {
-        margin: 20px 0;
+        margin-bottom: 20px;
 
         font-weight: $bold;
         font-size: 24px;
         line-height: 120%;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 30px;
             font-size: 30px;
         }
     }
 
     h4 {
-        margin: 20px 0;
+        margin-bottom: 20px;
 
         font-weight: $bold;
         font-size: 20px;
         line-height: 120%;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 30px;
             font-size: 24px;
         }
     }
 
     h5 {
-        margin: 20px 0 40px 0;
+        margin-bottom: 40px;
 
         font-weight: $regular;
         font-size: 18px;
         line-height: 130%;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 60px;
             font-size: 20px;
         }
     }
 
     h6 {
-        margin: 20px 0 40px 0;
+        margin-bottom: 40px;
         padding: 16px 24px 16px 18px;
 
         background-color: $c-light-purple;
@@ -149,6 +154,7 @@
         line-height: 130%;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 60px;
             padding: 16px 24px;
             font-size: 18px;
             line-height: 140%;
@@ -156,10 +162,10 @@
     }
 
     p {
-        margin: 30px 0;
+        margin-bottom: 40px;
 
         @media (min-width: $tablet-big) {
-            margin: 40px 0;
+            margin-bottom: 60px;
         }
     }
 
@@ -180,21 +186,27 @@
         }
     }
 
-    h1, h2, h3, h4, h5, h6, p {
-        &:first-child {
-            margin-top: 0;
-        }
+    // h1, h2, h3, h4, h5, h6, p {
+    //     &:first-child {
+    //         margin-top: 0;
+    //     }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+    // }
 
     table {
         width: 100%;
 
         border: none;
         border-collapse: collapse;
+
+        margin-bottom: 40px;
+
+        @media (min-width: $tablet-big) {
+            margin-bottom: 60px;
+        }
 
         th {
             border: none;
@@ -249,23 +261,30 @@
     }
 
     ul {
-        margin: 20px 0 30px 0;
+        margin-bottom: 40px;
 
         @media (min-width: $tablet-big) {
-            margin: 30px 0 40px 0;
+            margin-bottom: 60px;
         }
     }
 
     li ul {
-        margin: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media (min-width: $tablet-big) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
 
     ul > li {
-        margin: 10px 0;
+        margin-bottom: 10px;
         padding-left: 20px;
         background: url('../img/icons/bullet.svg') left 3px no-repeat;
 
         @media (min-width: $tablet-big) {
+            margin-bottom: 20px;
             background-position: left 5px;
             padding-left: 30px;
         }
@@ -304,18 +323,24 @@
     }
 
     ol {
-        margin: 20px 0 30px 0;
+        margin-bottom: 40px;
         padding: 0 0 0 16px;
         list-style-position: outside;
 
         @media (min-width: $tablet-big) {
-            margin: 30px 0 40px 0;
+            margin-bottom: 60px;
             padding: 0 0 0 18px;
         }
     }
 
     li ol {
-        margin: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media (min-width: $tablet-big) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
     }
 
     ol > li {
@@ -368,7 +393,11 @@
     }
 
     .flex {
+        margin-bottom: 40px;
+
         @media (min-width: $tablet-big) {
+            margin-bottom: 60px;
+
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -392,20 +421,20 @@
         border-left: none;
         border-right: none;
         border-bottom: none;
-        margin: 30px 0;
+        margin-bottom: 40px;
 
         @media (min-width: $tablet-big) {
-            margin: 40px 0;
+            margin-bottom: 60px;
         }
     }
 
     .tabs {
         display: flex;
         border-bottom: 1px solid $c-medium-gray;
-        margin: 30px 0;
+        margin-bottom: 20px;
 
         @media (min-width: $tablet-big) {
-            margin: 40px 0;
+            margin-bottom: 30px;
         }
 
         &__item {
@@ -521,7 +550,11 @@
                 }
 
                 p {
-                    margin: 20px 0;
+                    margin-bottom: 20px;
+
+                    @media (min-width: $tablet-big) {
+                        margin-bottom: 40px;
+                    }
 
                     &:first-child {
                         margin-top: 0;
@@ -529,10 +562,6 @@
 
                     &:last-child {
                         margin-bottom: 0;
-
-                        // @media (min-width: $tablet-big) {
-                        //     margin-bottom: 20px;
-                        // }
                     }
                 }
             }
