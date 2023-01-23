@@ -34,6 +34,10 @@
         &-input {
             width: 158px;
             padding: 11px 40px 11px 12px;
+
+            .is-active & {
+                border-color: $c-prime;
+            }
         }
 
         &-button {
@@ -56,6 +60,10 @@
         &-input {
             width: 123px;
             padding: 11px 40px 11px 12px;
+
+            .is-active & {
+                border-color: $c-prime;
+            }
         }
 
         &-button {
@@ -78,6 +86,10 @@
         &-input {
             width: 151px;
             padding: 11px 40px 11px 12px;
+
+            .is-active & {
+                border-color: $c-prime;
+            }
         }
 
         &-button {
@@ -268,6 +280,10 @@
             padding: 10px 11px;
             font-size: 16px;
             line-height: 22px;
+
+            .search-form__popup-block.is-active & {
+                border-color: $c-prime;
+            }
 
             .search-form__popup-block--mobile & {
                 padding-right: 40px;

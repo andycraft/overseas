@@ -65,6 +65,26 @@ function showAllCountries(e)
     document.querySelector('.main-search__countries__show-all').remove();
 }
 
+function getInnerText(elem)
+{
+    console.log(elem.innerText);
+    if (elem.innerText) return elem.innerText;
+
+    let children = elem.querySelectorAll('*');
+    console.log('children');
+    console.log(children);
+
+    let text = '';
+    children.forEach((child) => {
+        console.log(child);
+        if (child.innerText) {
+            text += ' ' + child.innerText;
+        }
+    });
+
+    return text.trim();
+}
+
 (function(){
     console.log('dom ready');
 
@@ -88,6 +108,11 @@ function showAllCountries(e)
     addEventHandler('.add-listing__dropdown-input__button', 'click', function(e){
         e.preventDefault();
         this.parentElement.classList.toggle('is-active');
+
+        let options = this.parentElement.querySelector('.options');
+        if (options) {
+            options.classList.toggle('is-hidden');
+        }
     });
 
     addEventHandler('.add-listing__tag', 'click', function(e){
@@ -182,6 +207,14 @@ function showAllCountries(e)
     addEventHandler('.search-form__flats-button, .search-form__bedrooms-button, .search-form__cost-button', 'click', function(e){
         e.preventDefault();
         this.classList.toggle('is-active');
+
+        let parent = this.parentElement;
+        parent.classList.toggle('is-active');
+
+        let options = parent.querySelector('.options');
+        if (options) {
+            options.classList.toggle('is-hidden');
+        }
     });
 
     addEventHandler('.search-form__filters-button', 'click', function(e){
@@ -196,6 +229,14 @@ function showAllCountries(e)
     addEventHandler('.search-form__popup-input-button', 'click', function(e){
         e.preventDefault();
         this.classList.toggle('is-active');
+
+        let parent = this.parentElement;
+        parent.classList.toggle('is-active');
+
+        let options = parent.querySelector('.options');
+        if (options) {
+            options.classList.toggle('is-hidden');
+        }
     });
 
     addEventHandler('.search-form__popup-tag', 'click', function(e){
@@ -246,6 +287,58 @@ function showAllCountries(e)
 
         if (faq_item) {
             faq_item.classList.toggle('is-active');
+        }
+    });
+
+    addEventHandler('.options__item', 'click', function(e){
+        let options = this.closest('.options');
+
+        if (options) {
+            let multiple = options.classList.contains('options--multiple');
+
+            if (multiple) {
+                let checkbox = this.querySelector('.cbx');
+                if (checkbox) {
+                    if (checkbox.checked) {
+                        this.classList.add('is-selected');
+                    } else {
+                        this.classList.remove('is-selected');
+                    }
+                } else {
+                    this.classList.toggle('is-selected');
+                }
+            } else {
+                let options_items = options.querySelectorAll('.options__item');
+                options_items.forEach((tab) => {
+                    tab.classList.remove('is-selected');
+                });
+
+                let options_checkboxes = options.querySelectorAll('.cbx');
+                options_checkboxes.forEach((cbx) => {
+                    cbx.checked = '';
+                });
+
+                this.classList.add('is-selected');
+
+                let checkbox = this.querySelector('.cbx');
+                if (checkbox) checkbox.checked = 'checked';
+
+                let parent = options.parentElement;
+                parent.classList.remove('is-active');
+
+                let button = parent.querySelector('button');
+                if (button) {
+                    button.classList.remove('is-active');
+                }
+
+                options.classList.add('is-hidden');
+
+                // set value
+                let input = parent.querySelector('input[type=text]');
+                if (input) {
+                    input.value = this.innerText.trim();
+                }
+            }
         }
     });
 
