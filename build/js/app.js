@@ -65,26 +65,6 @@ function showAllCountries(e)
     document.querySelector('.main-search__countries__show-all').remove();
 }
 
-function getInnerText(elem)
-{
-    console.log(elem.innerText);
-    if (elem.innerText) return elem.innerText;
-
-    let children = elem.querySelectorAll('*');
-    console.log('children');
-    console.log(children);
-
-    let text = '';
-    children.forEach((child) => {
-        console.log(child);
-        if (child.innerText) {
-            text += ' ' + child.innerText;
-        }
-    });
-
-    return text.trim();
-}
-
 (function(){
     console.log('dom ready');
 
@@ -129,6 +109,13 @@ function getInnerText(elem)
     addEventHandler('.inline-form__input__dropdown', 'click', function(e){
         e.preventDefault();
         this.classList.toggle('is-active');
+    });
+
+    addEventHandler('.btn--toggle-errors', 'click', function(e){
+        e.preventDefault();
+        document.querySelectorAll('.add-listing__field').forEach((field) => {
+            field.classList.toggle('has-errors');
+        });
     });
 
     // Property page

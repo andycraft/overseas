@@ -1,5 +1,5 @@
 @@include('_include/header.html', {
-    "title": "Add listing"
+    "title":"Add listing"
 })
 
         <content class="content">
@@ -34,6 +34,8 @@
                 </div>
 
                 <div class="content__body">
+                    <button class="btn btn--gray btn--toggle-errors" style="border-style: dashed;">Toggle errors</button>
+
                     <h1 class="content__body__title">
                         Add listing
                     </h1>
@@ -44,43 +46,70 @@
                                 <h3 class="add-listing__title">General Info</h3>
 
                                 <div class="add-listing__block">
-                                    <input class="inp add-listing__input add-listing__input--name" type="text" placeholder="Title">
+                                    <div class="add-listing__field add-listing__field--name">
+                                        <input class="inp add-listing__input add-listing__input--name" type="text" placeholder="Title">
+                                        <div class="error-text">Error description</div>
+                                    </div>
                                 </div>
 
                                 <div class="add-listing__block">
-                                    <div class="add-listing__dropdown-input add-listing__dropdown-input--type">
-                                        <input class="inp add-listing__input add-listing__input--type" type="text" placeholder="Property Type">
-                                        <button class="add-listing__dropdown-input__button"></button>
+                                    <div class="add-listing__field add-listing__field--type">
+                                        <div class="add-listing__dropdown-input add-listing__dropdown-input--type">
+                                            <input class="inp add-listing__input add-listing__input--type" type="text" placeholder="Property Type">
+                                            <button class="add-listing__dropdown-input__button"></button>
 
-                                        <div class="options is-hidden">
-                                            <label class="options__item">House / villa</label>
-                                            <label class="options__item">Flat / apartment</label>
-                                            <label class="options__item">Commercial</label>
-                                            <label class="options__item">Land</label>
+                                            <div class="options is-hidden">
+                                                <label class="options__item">House / villa</label>
+                                                <label class="options__item">Flat / apartment</label>
+                                                <label class="options__item">Commercial</label>
+                                                <label class="options__item">Land</label>
+                                            </div>
                                         </div>
+
+                                        <div class="error-text">Error description</div>
                                     </div>
 
-                                    <input class="inp add-listing__input add-listing__input--ref" type="text" placeholder="Ref number">
+                                    <div class="add-listing__field add-listing__field--ref">
+                                        <input class="inp add-listing__input add-listing__input--ref" type="text" placeholder="Ref number">
+                                        <div class="error-text">Error description Error description Error description Error description Error description Error description Error description</div>
+                                    </div>
 
-                                    <input class="inp add-listing__input add-listing__input--coords" type="text" placeholder="Coordinates">
+                                    <div class="add-listing__field add-listing__field--coords">
+                                        <input class="inp add-listing__input add-listing__input--coords" type="text" placeholder="Coordinates">
+                                        <div class="error-text">Error description</div>
+                                    </div>
                                 </div>
 
                                 <div class="add-listing__block add-listing__block--address">
-                                    <div class="add-listing__dropdown-input add-listing__dropdown-input--address">
-                                        <input class="inp add-listing__input add-listing__input--address" type="text" placeholder="Property address">
-                                        <button class="add-listing__dropdown-input__button"></button>
+                                    <div class="add-listing__field add-listing__field--address">
+                                        <div class="add-listing__dropdown-input add-listing__dropdown-input--address">
+                                            <input class="inp add-listing__input add-listing__input--address" type="text" placeholder="Property address">
+                                            <button class="add-listing__dropdown-input__button"></button>
+                                        </div>
+
+                                        <div class="error-text">Error description</div>
                                     </div>
 
-                                    <button class="btn add-listing__button add-listing__button--map">See map</button>
+                                    <div class="add-listing__field add-listing__field--map">
+                                        <button class="btn add-listing__button add-listing__button--map">See map</button>
+                                    </div>
 
-                                    <label class="lbl add-listing__label add-listing__label--hide-location">
-                                        <input class="cbx add-listing__checkbox" type="checkbox" value="on">
-                                        <span class="add-listing__label__text">Not show exact location to customer</span>
-                                    </label>
+                                    <div class="add-listing__field add-listing__field--hide-location">
+                                        <label class="lbl add-listing__label add-listing__label--hide-location">
+                                            <input class="cbx add-listing__checkbox" type="checkbox" value="on">
+                                            <span class="add-listing__label__text">Not show exact location to customer</span>
+                                        </label>
+
+                                        <div class="error-text">Error description</div>
+                                    </div>
                                 </div>
 
                                 <div class="add-listing__block">
-                                    <textarea class="txt add-listing__textarea add-listing__textarea--description" placeholder="Property Description"></textarea>
+                                    <div class="add-listing__field add-listing__field--description">
+                                        <textarea class="txt add-listing__textarea add-listing__textarea--description" placeholder="Property Description"></textarea>
+
+                                        <div class="error-text">Error description</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -88,45 +117,82 @@
                                 <h3 class="add-listing__title">Additional Parameters</h3>
 
                                 <div class="add-listing__block add-listing__block--additional">
-                                    <input class="inp add-listing__input add-listing__input--price" type="text" placeholder="Price">
-
-                                    <div class="add-listing__dropdown-input add-listing__dropdown-input--currency">
-                                        <input class="inp add-listing__input add-listing__input--currency" type="text" placeholder="Currency">
-                                        <button class="add-listing__dropdown-input__button"></button>
+                                    <div class="add-listing__field add-listing__field--price">
+                                        <input class="inp add-listing__input add-listing__input--price" type="text" placeholder="Price">
+                                        <div class="error-text">Error description</div>
                                     </div>
 
-                                    <input class="inp add-listing__input add-listing__input--size" type="text" placeholder="Size, sq.m">
+                                    <div class="add-listing__field add-listing__field--currency">
+                                        <div class="add-listing__dropdown-input add-listing__dropdown-input--currency">
+                                            <input class="inp add-listing__input add-listing__input--currency" type="text" placeholder="Currency">
+                                            <button class="add-listing__dropdown-input__button"></button>
+                                        </div>
+                                        <div class="error-text">Error description Error description Error description Error description</div>
+                                    </div>
 
-                                    <input class="inp add-listing__input add-listing__input--bathrooms" type="text" placeholder="Bathrooms">
+                                    <div class="add-listing__field add-listing__field--size">
+                                        <input class="inp add-listing__input add-listing__input--size" type="text" placeholder="Size, sq.m">
+                                        <div class="error-text">Error description</div>
+                                    </div>
 
-                                    <input class="inp add-listing__input add-listing__input--bedrooms" type="text" placeholder="Bedrooms">
+                                    <div class="add-listing__field add-listing__field--bathrooms">
+                                        <input class="inp add-listing__input add-listing__input--bathrooms" type="text" placeholder="Bathrooms">
+                                        <div class="error-text">Error description</div>
+                                    </div>
+
+                                    <div class="add-listing__field add-listing__field--bedrooms">
+                                        <input class="inp add-listing__input add-listing__input--bedrooms" type="text" placeholder="Bedrooms">
+                                        <div class="error-text">Error description</div>
+                                    </div>
                                 </div>
 
                                 <div class="add-listing__block add-listing__block--bfd">
                                     <div class="add-listing__subblock add-listing__subblock--building">
                                         <h4 class="add-listing__subtitle">Construction dates</h4>
 
-                                        <div class="add-listing__dropdown-input add-listing__dropdown-input--build">
-                                            <input class="inp add-listing__input add-listing__input--build" type="text" placeholder="Build">
-                                            <button class="add-listing__dropdown-input__button"></button>
+                                        <div class="add-listing__field add-listing__field--build">
+                                            <div class="add-listing__dropdown-input add-listing__dropdown-input--build">
+                                                <input class="inp add-listing__input add-listing__input--build" type="text" placeholder="Build">
+                                                <button class="add-listing__dropdown-input__button"></button>
+                                            </div>
+                                            <div class="error-text">Error description</div>
                                         </div>
 
-                                        <div class="add-listing__dropdown-input add-listing__dropdown-input--completion">
-                                            <input class="inp add-listing__input add-listing__input--completion" type="text" placeholder="Completion">
-                                            <button class="add-listing__dropdown-input__button"></button>
+                                        <div class="add-listing__field add-listing__field--completion">
+                                            <div class="add-listing__dropdown-input add-listing__dropdown-input--completion">
+                                                <input class="inp add-listing__input add-listing__input--completion" type="text" placeholder="Completion">
+                                                <button class="add-listing__dropdown-input__button"></button>
+                                            </div>
+                                            <div class="error-text">Error description</div>
                                         </div>
                                     </div>
 
                                     <div class="add-listing__subblock add-listing__subblock--floors">
                                         <h4 class="add-listing__subtitle">Floors</h4>
-                                        <input class="inp add-listing__input add-listing__input--floor" type="text" placeholder="Floor">
-                                        <input class="inp add-listing__input add-listing__input--floors" type="text" placeholder="Floors">
+
+                                        <div class="add-listing__field add-listing__field--floor">
+                                            <input class="inp add-listing__input add-listing__input--floor" type="text" placeholder="Floor">
+                                            <div class="error-text">Error description</div>
+                                        </div>
+
+                                        <div class="add-listing__field add-listing__field--floors">
+                                            <input class="inp add-listing__input add-listing__input--floors" type="text" placeholder="Floors">
+                                            <div class="error-text">Error description</div>
+                                        </div>
                                     </div>
 
                                     <div class="add-listing__subblock add-listing__subblock--distance">
                                         <h4 class="add-listing__subtitle">Distance</h4>
-                                        <input class="inp add-listing__input add-listing__input--airport" type="text" placeholder="To airport, km">
-                                        <input class="inp add-listing__input add-listing__input--sea" type="text" placeholder="To sea, km">
+
+                                        <div class="add-listing__field add-listing__field--airport">
+                                            <input class="inp add-listing__input add-listing__input--airport" type="text" placeholder="To airport, km">
+                                            <div class="error-text">Error description Error description Error description Error description</div>
+                                        </div>
+
+                                        <div class="add-listing__field add-listing__field--sea">
+                                            <input class="inp add-listing__input add-listing__input--sea" type="text" placeholder="To sea, km">
+                                            <div class="error-text">Error description</div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -134,25 +200,33 @@
                                     <div class="add-listing__subblock add-listing__subblock--status">
                                         <h4 class="add-listing__subtitle add-listing__subtitle--status">Status</h4>
 
-                                        <div class="add-listing__tags">
-                                            <button class="add-listing__tag">New Build</button>
-                                            <button class="add-listing__tag">Under Construction</button>
+                                        <div class="add-listing__field add-listing__field--status">
+                                            <div class="add-listing__tags">
+                                                <button class="add-listing__tag">New Build</button>
+                                                <button class="add-listing__tag">Under Construction</button>
+                                            </div>
+
+                                            <div class="error-text">Error description</div>
                                         </div>
                                     </div>
 
                                     <div class="add-listing__subblock add-listing__subblock--features">
                                         <h4 class="add-listing__subtitle add-listing__subtitle--features">Select features</h4>
 
-                                        <div class="add-listing__tags">
-                                            <button class="add-listing__tag">Top Floor</button>
-                                            <button class="add-listing__tag">Swimming Pool</button>
-                                            <button class="add-listing__tag">Parking</button>
-                                            <button class="add-listing__tag">Lift</button>
-                                            <button class="add-listing__tag">Garden</button>
-                                            <button class="add-listing__tag">Terrace</button>
-                                            <button class="add-listing__tag">Air conditioning</button>
-                                            <button class="add-listing__tag">Fitted wardrobes</button>
-                                            <button class="add-listing__tag">Storage room</button>
+                                        <div class="add-listing__field add-listing__field--features">
+                                            <div class="add-listing__tags">
+                                                <button class="add-listing__tag">Top Floor</button>
+                                                <button class="add-listing__tag">Swimming Pool</button>
+                                                <button class="add-listing__tag">Parking</button>
+                                                <button class="add-listing__tag">Lift</button>
+                                                <button class="add-listing__tag">Garden</button>
+                                                <button class="add-listing__tag">Terrace</button>
+                                                <button class="add-listing__tag">Air conditioning</button>
+                                                <button class="add-listing__tag">Fitted wardrobes</button>
+                                                <button class="add-listing__tag">Storage room</button>
+                                            </div>
+
+                                            <div class="error-text">Error description</div>
                                         </div>
                                     </div>
                                 </div>
@@ -184,8 +258,6 @@
                                             <a class="add-listing__file-link" href="#">File_file.pdf</a>
                                         </div>
 
-
-
                                         <div class="add-listing__file-preview">
                                             <div class="add-listing__image-preview">
                                                 <img src="img/property/property-1.webp">
@@ -214,8 +286,15 @@
                                 </div>
 
                                 <div class="add-listing__block add-listing__block--links">
-                                    <input class="inp add-listing__input" type="text" placeholder="Virtual tour link">
-                                    <input class="inp add-listing__input" type="text" placeholder="Video link">
+                                    <div class="add-listing__field add-listing__field--tour">
+                                        <input class="inp add-listing__input add-listing__input--tour" type="text" placeholder="Virtual tour link">
+                                        <div class="error-text">Error description</div>
+                                    </div>
+
+                                    <div class="add-listing__field add-listing__field--video">
+                                        <input class="inp add-listing__input add-listing__input--video" type="text" placeholder="Video link">
+                                        <div class="error-text">Error description</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -223,15 +302,23 @@
                                 <h3 class="add-listing__title">Responsible person</h3>
 
                                 <div class="add-listing__block add-listing__block--person">
-                                    <div class="add-listing__dropdown-input add-listing__dropdown-input--person">
-                                        <input class="inp add-listing__input add-listing__input--person" type="text" placeholder="Choose person">
-                                        <button class="add-listing__dropdown-input__button"></button>
+                                    <div class="add-listing__field add-listing__field--person-input">
+                                        <div class="add-listing__dropdown-input add-listing__dropdown-input--person">
+                                            <input class="inp add-listing__input add-listing__input--person" type="text" placeholder="Choose person">
+                                            <button class="add-listing__dropdown-input__button"></button>
+                                        </div>
+
+                                        <div class="error-text">Error description</div>
                                     </div>
 
-                                    <div class="add-listing__person">
-                                        <img class="add-listing__person__image" src="img/avatar.png">
-                                        <span class="add-listing__person__name">Noufal Paduvil</span>
-                                        <button class="add-listing__person__remove"></button>
+                                    <div class="add-listing__field add-listing__field--person-button">
+                                        <div class="add-listing__person">
+                                            <img class="add-listing__person__image" src="img/avatar.png">
+                                            <span class="add-listing__person__name">Noufal Paduvil</span>
+                                            <button class="add-listing__person__remove"></button>
+                                        </div>
+
+                                        <div class="error-text">Error description</div>
                                     </div>
                                 </div>
                             </div>

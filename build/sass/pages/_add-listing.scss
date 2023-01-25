@@ -41,6 +41,7 @@
         @media (min-width: $tablet-big) {
             flex-direction: row;
             flex-wrap: wrap;
+            align-items: flex-start;
 
             &--bfd {
                 column-gap: 24px;
@@ -65,6 +66,8 @@
         &--links {
             display: flex;
             flex-direction: column;
+            align-items: stretch;
+
             gap: 12px;
         }
 
@@ -117,22 +120,19 @@
 
                 flex-direction: row;
                 flex-wrap: wrap;
-
-                & .add-listing__input {
-                    width: 30%;
-                    flex-grow: 1;
-                }
             }
         }
     }
 
-    &__input {
-        font-size: 16px;
-        line-height: 22px;
-        padding: 15px 12px;
+    &__field {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
 
-        &::placeholder {
-            color: #C2C2CF;
+        &--description,
+        &--tour,
+        &--video {
+            flex-grow: 1;
         }
 
         @media (max-width: $mobile-max) {
@@ -142,13 +142,12 @@
                 flex-basis: 100%;
             }
 
+            &--currency,
             &--size,
             &--bathrooms,
-            &--bedrooms {
-                flex-basis: 40%;
-                flex-grow: 1;
-            }
-
+            &--bedrooms,
+            &--build,
+            &--completion,
             &--floor,
             &--floors,
             &--airport,
@@ -156,11 +155,22 @@
                 flex-basis: 40%;
                 flex-grow: 1;
             }
+
+            &--address {
+                flex-basis: 100%;
+            }
+
+            &--map {
+                width: auto;
+            }
+
+            &--hide-location {
+                flex-basis: 50%;
+            }
         }
 
         @media (min-width: $tablet-big) {
-            &--name,
-            &--type {
+            &--name {
                 flex-grow: 1;
             }
 
@@ -177,16 +187,61 @@
                 flex-grow: 1;
             }
 
+            &--type {
+                flex-basis: 25%;
+                flex-grow: 1;
+            }
+
             &--ref {
-                flex-grow: 2;
+                flex-basis: 33%;
+                flex-grow: 1;
             }
 
             &--coords {
-                flex-grow: 3;
+                flex-basis: 39%;
+                flex-grow: 1;
             }
 
             &--address {
-                width: 100%;
+                flex-grow: 1;
+            }
+
+            &--hide-location {
+                flex-basis: 100%;
+            }
+
+            &--build,
+            &--completion,
+            &--floor,
+            &--floors,
+            &--airport,
+            &--sea {
+                flex-basis: 40%;
+                flex-grow: 1;
+            }
+
+            &--person-input {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    &__input {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 15px 12px;
+        width: 100%;
+
+        &::placeholder {
+            color: #C2C2CF;
+        }
+
+        .has-errors & {
+            background: rgba(255, 40, 53, 0.07);
+            border-color: $c-red;
+
+            &::placeholder {
+                color: rgba(255, 40, 53, 0.4);
             }
         }
     }
@@ -212,31 +267,6 @@
                 background-image: url('../img/arrow-up.svg');
             }
         }
-
-        &--address {
-            flex-grow: 1;
-
-            @media (max-width: $mobile-max) {
-                flex-basis: 100%;
-            }
-        }
-
-        @media (max-width: $mobile-max) {
-            &--currency {
-                flex-basis: 40%;
-                flex-grow: 1;
-            }
-        }
-
-        &--build,
-        &--completion {
-            flex-basis: 40%;
-            flex-grow: 1;
-        }
-
-        &--person {
-            flex-grow: 1;
-        }
     }
 
     &__textarea {
@@ -246,6 +276,15 @@
 
         &::placeholder {
             color: #C2C2CF;
+        }
+
+        .has-errors & {
+            background: rgba(255, 40, 53, 0.07);
+            border-color: $c-red;
+
+            &::placeholder {
+                color: rgba(255, 40, 53, 0.4);
+            }
         }
 
         &--description {
@@ -311,6 +350,10 @@
             line-height: 20px;
         }
 
+        .has-errors & {
+            color: $c-red;
+        }
+
         &--hide-location {
             @media (max-width: $mobile-max) {
                 padding-top: 4px;
@@ -337,6 +380,11 @@
         &:checked {
             background: url('../img/icons/check.svg') center center no-repeat;
         }
+
+        .has-errors & {
+            background-color: rgba(255, 40, 53, 0.07);
+            border-color: $c-red;
+        }
     }
 
     &__tags {
@@ -361,6 +409,18 @@
         &.is-selected {
             background-color: $c-light-blue;
             border-color: $c-light-blue;
+        }
+
+        .has-errors & {
+            background-color: rgba(255, 40, 53, 0.07);
+            border-color: $c-red;
+            color: $c-red;
+
+            &.is-selected {
+                background-color: $c-red;
+                border-color: $c-red;
+                color: $c-white;
+            }
         }
     }
 
@@ -448,6 +508,11 @@
         border-radius: 12px;
         padding: 15px 16px;
 
+        .has-errors & {
+            background-color: rgba(255, 40, 53, 0.07);
+            border-color: $c-red;
+        }
+
         @media (max-width: $mobile-max) {
             margin-right: auto;
         }
@@ -474,4 +539,8 @@
             background-size: 14px 14px;
         }
     }
+}
+
+.btn--toggle-errors {
+    float: right;
 }

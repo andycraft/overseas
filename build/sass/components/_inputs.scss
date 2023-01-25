@@ -116,3 +116,14 @@ textarea {
     }
 }
 
+.error-text {
+    display: none;
+    color: $c-red;
+    font-size: 12px;
+    line-height: 120%;
+
+    .has-errors & {
+        display: block;
+    }
+}
+
