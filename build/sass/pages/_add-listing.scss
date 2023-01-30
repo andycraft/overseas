@@ -224,6 +224,29 @@
                 flex-grow: 1;
             }
         }
+
+        &.has-label {
+            position: relative;
+
+            .input-label {
+                pointer-events: none;
+                transition: 0.2s ease all;
+
+                position: absolute;
+                top: 16px;
+                left: 13px;
+
+                color: #C2C2CF;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        &.has-label.has-errors {
+            .input-label {
+                color: rgba(255, 40, 53, 0.4);
+            }
+        }
     }
 
     &__input {
@@ -243,6 +266,22 @@
             &::placeholder {
                 color: rgba(255, 40, 53, 0.4);
             }
+        }
+
+        .has-label & {
+            padding-top: 23px;
+            padding-bottom: 7px;
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+        .has-label &:focus ~ .input-label,
+        .has-label &:not(:placeholder-shown) ~ .input-label {
+            top: 8px;
+            font-size: 12px;
+            line-height: 14px;
         }
     }
 
@@ -290,6 +329,22 @@
         &--description {
             flex-grow: 1;
             height: 80px;
+        }
+
+        .has-label & {
+            padding-top: 23px;
+            padding-bottom: 7px;
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+        .has-label &:focus ~ .input-label,
+        .has-label &:not(:placeholder-shown) ~ .input-label {
+            top: 8px;
+            font-size: 12px;
+            line-height: 14px;
         }
     }
 
